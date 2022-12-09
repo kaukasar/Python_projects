@@ -12,12 +12,12 @@ nummer = 0
 vanligasteordet = ""
 
 try:
-    f = open(textfil, "r")
-    for rad in f:
-        ordlista = rad.split()
-        for ord in ordlista:
-            räknare[ord] = räknare.get(ord, 0) + 1
-    f.close()
+    with open('textfil', "r") as f:
+        for rad in f:
+            ordlista = rad.split()
+            for ord in ordlista:
+                räknare[ord] = räknare.get(ord, 0) + 1
+
 except UnicodeDecodeError:
     print(f'Kunde inte öppna filen')
     exit()
@@ -35,4 +35,4 @@ for (k,v) in räknare.items():
     lista.append(thistuple)
 lista.sort()
 # skriver ut alla ord, ordnat efter hur vanliga de är
-#print(lista)
+print(lista)
