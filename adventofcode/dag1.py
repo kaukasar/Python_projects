@@ -1,4 +1,4 @@
-with open('dag1.txt', 'r') as f:
+with open('input1.txt', 'r') as f:
     innehåll = f.readlines()
     summa = 0
     räknare = 0
