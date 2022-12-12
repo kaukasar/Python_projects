@@ -104,7 +104,7 @@ indata = []
 #koordinater = set()
 with open('input8.txt', 'r') as f:
     for rad in f:
-        indata.append([*rad.strip()])
+        indata.append([*rad.strip()]) # [* packar upp strängen till en char array
 matrix = matris(indata)
 matrix.setPosition(0, 0)
 
